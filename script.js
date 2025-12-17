@@ -40,14 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
 // Enhanced interactions and animations
 document.addEventListener('DOMContentLoaded', function() {
   
-  // ===== PARALLAX EFFECT FOR HERO =====
-  window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const heroLeft = document.querySelector('.hero-left');
-    if (heroLeft) {
-      heroLeft.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-  });
+  // // ===== PARALLAX EFFECT FOR HERO =====
+  // window.addEventListener('scroll', function() {
+  //   const scrolled = window.pageYOffset;
+  //   const heroLeft = document.querySelector('.hero-left');
+  //   if (heroLeft) {
+  //     heroLeft.style.transform = `translateY(${scrolled * 0.5}px)`;
+  //   }
+  // });
   
   // ===== LAZY LOAD IMAGES WITH FADE IN =====
   const images = document.querySelectorAll('img');
