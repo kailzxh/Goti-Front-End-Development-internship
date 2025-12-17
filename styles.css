@@ -2782,6 +2782,12 @@ img {
 .hero {
   align-items: stretch;
 }
+/* ===== FORCE HERO LEFT TO BEHAVE LIKE RIGHT ===== */
+.hero-left {
+  background-attachment: scroll !important;
+  position: relative !important;
+}
+
 
 .hero-left {
   position: sticky;
