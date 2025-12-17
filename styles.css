@@ -2779,18 +2779,13 @@ img {
 
 /* ===== HERO SCROLL FIX (DO NOT REMOVE) ===== */
 
-.hero {
-  align-items: stretch;
-}
-/* ===== FORCE HERO LEFT TO BEHAVE LIKE RIGHT ===== */
+
+/* ===== FINAL HERO FIX (STOP PARALLAX COMPLETELY) ===== */
 .hero-left {
   background-attachment: scroll !important;
+  animation: none !important;
   position: relative !important;
 }
 
 
-.hero-left {
-  position: sticky;
-  top: 0;
-  background-attachment: scroll !important;
-}
+
