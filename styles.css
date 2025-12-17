@@ -2781,11 +2781,19 @@ img {
 
 
 /* ===== FINAL HERO FIX (STOP PARALLAX COMPLETELY) ===== */
+/* ===== FINAL: STOP LEFT FROM SCROLLING ===== */
 .hero-left {
-  background-attachment: scroll !important;
-  animation: none !important;
-  position: relative !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  z-index: 1;
 }
+.hero-right {
+  margin-left: 50%;
+}
+
 
 
 
