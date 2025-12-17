@@ -100,7 +100,7 @@ body {
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 100vh; /* CHANGED */
+  min-height: 560px;
 }
 
 .hero-left {
@@ -108,20 +108,18 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: scroll;
 
-  position: fixed;          /* CHANGED */
-  top: 0;                   /* CHANGED */
-  left: 0;                  /* CHANGED */
-  width: 50%;               /* CHANGED */
-  height: 100vh;            /* CHANGED */
-
+  position: relative;
   color: #ffffff;
 
+  /* IMPORTANT */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-end; /* anchor content to bottom */
 
-  padding: 0 70px 120px;
+  padding: 0 70px 120px; /* space FROM BOTTOM */
+  min-height: 520px;
 }
 
 .hero-left h1 {
@@ -158,12 +156,9 @@ body {
   color: #0e0e0e;
 
   cursor: pointer;
-  align-self: flex-start;
-}
 
-/* REQUIRED so right side doesn’t go under fixed left */
-.hero-right {
-  margin-left: 50%; /* CHANGED */
+  /* THIS fixes the length */
+  align-self: flex-start;
 }
 
 .hero-right img {
