@@ -2775,3 +2775,15 @@ img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
+
+/* ===== HERO SCROLL FIX (DO NOT REMOVE) ===== */
+
+.hero {
+  align-items: stretch;
+}
+
+.hero-left {
+  position: sticky;
+  top: 0;
+  background-attachment: scroll !important;
+}
