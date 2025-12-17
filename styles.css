@@ -100,31 +100,30 @@ body {
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
+  min-height: 100vh; /* CHANGED */
 }
 
-/* LEFT SIDE — FIXED (WILL NOT SCROLL) */
 .hero-left {
   background-image: url("local/1st_coursal.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100vh;
+  position: fixed;          /* CHANGED */
+  top: 0;                   /* CHANGED */
+  left: 0;                  /* CHANGED */
+  width: 50%;               /* CHANGED */
+  height: 100vh;            /* CHANGED */
 
   color: #ffffff;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
   padding: 0 70px 120px;
 }
 
-/* TEXT STYLES — UNCHANGED */
 .hero-left h1 {
   font-size: 44px;
   line-height: 1.15;
@@ -150,18 +149,21 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+
   padding: 10px 20px;
   font-size: 14px;
+
   border: 1px solid #ffffff;
   background: white;
   color: #0e0e0e;
+
   cursor: pointer;
   align-self: flex-start;
 }
 
-/* PUSH RIGHT SIDE SO IT DOESN’T GO UNDER FIXED LEFT */
+/* REQUIRED so right side doesn’t go under fixed left */
 .hero-right {
-  margin-left: 50%;
+  margin-left: 50%; /* CHANGED */
 }
 
 .hero-right img {
@@ -169,6 +171,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
 
 /* ========== FEATURES ========== */
 .features {
