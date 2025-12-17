@@ -100,29 +100,31 @@ body {
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 560px;
+  min-height: 100vh;
 }
+
+/* LEFT SIDE — FIXED (WILL NOT SCROLL) */
 .hero-left {
   background-image: url("local/1st_coursal.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
 
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+
   color: #ffffff;
 
-  /* IMPORTANT */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;   /* anchor content to bottom */
-
-  padding: 0 70px 120px;       /* space FROM BOTTOM */
-
-  min-height: 520px;
+  justify-content: flex-end;
+  padding: 0 70px 120px;
 }
 
-
+/* TEXT STYLES — UNCHANGED */
 .hero-left h1 {
   font-size: 44px;
   line-height: 1.15;
@@ -135,6 +137,7 @@ body {
   font-style: italic;
   font-weight: 400;
 }
+
 .hero-left p {
   font-size: 14px;
   line-height: 1.6;
@@ -147,20 +150,19 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-
   padding: 10px 20px;
   font-size: 14px;
-
   border: 1px solid #ffffff;
   background: white;
   color: #0e0e0e;
-
   cursor: pointer;
-
-  /* THIS fixes the length */
   align-self: flex-start;
 }
 
+/* PUSH RIGHT SIDE SO IT DOESN’T GO UNDER FIXED LEFT */
+.hero-right {
+  margin-left: 50%;
+}
 
 .hero-right img {
   width: 100%;
